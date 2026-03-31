@@ -1,0 +1,246 @@
+.ep2-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+
+.ep2-main {
+  flex: 1;
+  padding: 28px 34px;
+}
+
+/* Header Card */
+.ep2-headerCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 26px rgba(17, 24, 39, 0.08);
+}
+
+.ep2-headerLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  min-width: 0;
+}
+
+.ep2-logo {
+  width: 76px;
+  height: 76px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  background: #fff;
+}
+
+.ep2-headerText {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+}
+
+.ep2-name {
+  font-size: 18px;
+  font-weight: 900;
+  color: #111827;
+  word-break: break-word;
+}
+
+.ep2-email {
+  font-size: 13px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.ep2-upload {
+  width: fit-content;
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 12px;
+  border: 1px dashed #cbd5e1;
+  font-weight: 900;
+  font-size: 13px;
+  cursor: pointer;
+  background: #fff;
+  color: #0f172a;
+}
+
+.ep2-upload input {
+  display: none;
+}
+
+.ep2-headerRight {
+  display: flex;
+  align-items: center;
+}
+
+.ep2-btnRow {
+  display: flex;
+  gap: 10px;
+}
+
+.ep2-btnPrimary,
+.ep2-btnSecondary {
+  height: 40px;
+  padding: 0 16px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.ep2-btnPrimary {
+  background: #0f172a;
+  color: #fff;
+  box-shadow: 0 12px 20px rgba(15, 23, 42, 0.18);
+}
+
+.ep2-btnSecondary {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.08);
+}
+
+.ep2-btnPrimary:hover,
+.ep2-btnSecondary:hover {
+  transform: translateY(-1px);
+}
+
+/* Title */
+.ep2-titleWrap {
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.ep2-title {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.ep2-subtitle {
+  margin-top: 6px;
+  color: #6b7280;
+  font-size: 13px;
+  font-weight: 800;
+}
+
+/* Cards grid */
+.ep2-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.ep2-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.06);
+}
+
+.ep2-cardLabel {
+  font-size: 12px;
+  font-weight: 900;
+  color: #6b7280;
+  margin-bottom: 8px;
+}
+
+.ep2-cardValue {
+  font-size: 14px;
+  font-weight: 800;
+  color: #111827;
+}
+
+/* Inputs */
+.ep2-input {
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  font-size: 14px;
+  font-weight: 800;
+  color: #111827;
+  outline: none;
+  background: #ffffff;
+}
+
+.ep2-input:disabled {
+  border-color: transparent;
+  padding-left: 0;
+  background: transparent;
+}
+
+.ep2-readonly {
+  padding: 2px 0;
+  color: #111827;
+  font-weight: 900;
+}
+
+/* Wide description card */
+.ep2-wideCard {
+  margin-top: 12px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 12px 14px;
+  box-shadow: 0 8px 18px rgba(17, 24, 39, 0.06);
+}
+
+.ep2-textarea {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 10px;
+  font-size: 14px;
+  font-weight: 800;
+  outline: none;
+  resize: vertical;
+  min-height: 120px;
+  color: #111827;
+  background: #ffffff;
+}
+
+.ep2-textarea:disabled {
+  border-color: transparent;
+  padding-left: 0;
+  background: transparent;
+}
+
+/* Loading */
+.ep2-loading {
+  padding: 18px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .ep2-main {
+    padding: 18px;
+  }
+
+  .ep2-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ep2-headerCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ep2-headerRight {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}

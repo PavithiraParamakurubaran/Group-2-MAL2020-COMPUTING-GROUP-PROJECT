@@ -1,0 +1,165 @@
+/* =============== Layout =============== */
+.resume-main {
+  width: 100%;
+  padding: 28px 32px;
+  background: #f6f7fb; /* soft app background */
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+.instruction-box {
+  background: #ffffff;
+  border: 1px solid #e7e9f0;
+  border-radius: 14px;
+  padding: 22px 22px 26px;
+  box-shadow: 0 6px 18px rgba(16, 24, 40, 0.06);
+}
+
+.instruction-box h2 {
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+}
+
+/* =============== Controls =============== */
+.controls-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: flex-end;
+  padding: 14px 14px 16px;
+  border: 1px solid #eef0f6;
+  background: #fbfbfe;
+  border-radius: 12px;
+}
+
+.controls-row > div {
+  min-width: 220px;
+}
+
+.controls-row label {
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #374151;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.controls-row input[type="file"],
+.controls-row select {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  padding: 8px 10px;
+  font-size: 13px;
+  color: #111827;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.controls-row select:focus,
+.controls-row input[type="file"]:focus {
+  border-color: #93c5fd;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+.step5-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  min-width: 260px;
+}
+
+/* =============== Buttons =============== */
+.generate-btn {
+  appearance: none;
+  border: 0;
+  background: #2563eb;
+  color: #ffffff;
+  height: 40px;
+  padding: 0 14px;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.04s ease, background 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 8px 16px rgba(37, 99, 235, 0.18);
+}
+
+.generate-btn:hover {
+  background: #1d4ed8;
+}
+
+.generate-btn:active {
+  transform: translateY(1px);
+}
+
+.generate-btn:disabled {
+  background: #9ca3af;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+/* Secondary button option (if you want later)
+.btn-secondary { background:#111827; box-shadow: 0 8px 16px rgba(17,24,39,.14); }
+.btn-secondary:hover { background:#0b1220; }
+*/
+
+/* =============== Resume Preview =============== */
+.resume-preview {
+  margin-top: 18px;
+  background: #f3f4f6;           /* background around paper */
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 18px;
+}
+
+/* Make resume look like an A4 page sitting on the preview background */
+.resume-preview > * {
+  margin: 0 auto;
+}
+
+/* Optional: if your templates use A4 width already (210mm), this helps it fit nicely on screen */
+@media screen {
+  .resume-preview {
+    overflow: auto; /* if paper is bigger than screen */
+  }
+}
+
+/* =============== Small helper styles =============== */
+.resume-empty {
+  padding: 18px;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.generate-btn--primary {
+  width: 100%;
+  height: 44px;
+  margin-top: 18px;
+}
+/* =============== Responsive =============== */
+@media (max-width: 980px) {
+  .resume-main {
+    padding: 18px;
+  }
+
+  .controls-row {
+    padding: 12px;
+  }
+
+  .controls-row > div {
+    min-width: 100%;
+  }
+
+  .step5-actions {
+    min-width: 100%;
+  }
+
+  .generate-btn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,320 @@
+/* Layout */
+.sp-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f7fb;
+}
+
+.sp-main {
+  flex: 1;
+  padding: 28px 34px;
+  color: #0f172a;
+}
+
+/* Top title row */
+.sp-pageTop {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.sp-title {
+  margin: 0;
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 0.2px;
+}
+
+.sp-subtitle {
+  margin-top: 6px;
+  font-size: 13px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* Loading */
+.sp-loading {
+  padding: 28px 34px;
+  min-height: 100vh;
+  background: #f6f7fb;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+/* Buttons */
+.sp-actionsTop {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.sp-btnPrimary {
+  background: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 16px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.12s ease;
+}
+
+.sp-btnPrimary:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+.sp-btnPrimary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sp-btnGhost {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #cbd5e1;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: 0.12s ease;
+}
+
+.sp-btnGhost:hover {
+  background: #f8fafc;
+}
+
+.sp-btnGhost:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Outline small button */
+.sp-btnOutline {
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  color: #0f172a;
+  padding: 8px 12px;
+  border-radius: 12px;
+  font-weight: 900;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sp-btnOutline:hover {
+  background: #f8fafc;
+}
+
+/* Summary card */
+.sp-summaryCard {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.08);
+  margin-bottom: 14px;
+}
+
+.sp-summaryLeft {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.sp-avatar {
+  width: 88px;
+  height: 88px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 1px solid #e5e7eb;
+  background: #f8fafc;
+}
+
+.sp-summaryText {
+  flex: 1;
+  min-width: 0;
+}
+
+.sp-name {
+  font-size: 18px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.sp-meta {
+  margin-top: 6px;
+  color: #334155;
+  font-size: 13px;
+  font-weight: 700;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.sp-dot {
+  color: #94a3b8;
+}
+
+.sp-uploadRow {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+.sp-hint {
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* 2-column page grid */
+.sp-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+/* Cards */
+.sp-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 18px;
+  padding: 14px;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.06);
+}
+
+.sp-cardHead {
+  padding: 2px 2px 10px;
+  border-bottom: 1px solid #eef2f7;
+  margin-bottom: 12px;
+}
+
+.sp-cardTitle {
+  font-size: 15px;
+  font-weight: 900;
+  color: #0f172a;
+}
+
+.sp-cardSub {
+  margin-top: 4px;
+  font-size: 12px;
+  color: #64748b;
+  font-weight: 700;
+}
+
+/* Form */
+.sp-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sp-field {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 10px;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 14px;
+  background: #f8fafc;
+  border: 1px solid #eef2f7;
+}
+
+.sp-label {
+  font-size: 13px;
+  font-weight: 900;
+  color: #334155;
+}
+
+.sp-control {
+  color: #0f172a;
+}
+
+/* Inputs */
+.sp-control input,
+.sp-control select {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  background: #ffffff;
+  color: #0f172a;
+  font-size: 14px;
+  font-weight: 800;
+  outline: none;
+  transition: 0.15s ease;
+}
+
+.sp-control input:focus,
+.sp-control select:focus {
+  border-color: #cbd5e1;
+  box-shadow: 0 0 0 4px rgba(148, 163, 184, 0.25);
+}
+
+/* Disabled looks like text but aligned */
+.sp-control input:disabled,
+.sp-control select:disabled {
+  background: transparent;
+  border: 1px solid transparent;
+  padding-left: 0;
+  box-shadow: none;
+  color: #0f172a;
+  font-weight: 900;
+}
+
+/* Two fields row inside a card */
+.sp-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+/* Bottom actions (shows only when editing) */
+.sp-actionsBottom {
+  display: none;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 1050px) {
+  .sp-main {
+    padding: 18px;
+  }
+  .sp-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 820px) {
+  .sp-pageTop {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sp-field {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .sp-row2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* On mobile, show bottom save/cancel inside the card */
+  .sp-actionsTop {
+    display: none;
+  }
+  .sp-actionsBottom {
+    display: flex;
+  }
+}

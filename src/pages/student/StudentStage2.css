@@ -1,0 +1,263 @@
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  font-family: Arial, sans-serif;
+}
+
+.dashboard-content {
+  flex: 1;
+  padding: 20px 20px;
+  box-sizing: border-box;
+}
+
+.ss2-page {
+  width: 100%;
+}
+
+.ss2-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.ss2-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #102a43;
+}
+
+.ss2-subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #627d98;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.ss2-header-badge {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 18px;
+  padding: 14px 16px;
+  box-shadow: 0 10px 22px rgba(15, 23, 42, 0.06);
+  min-width: 150px;
+}
+
+.ss2-badge-label {
+  font-size: 12px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #486581;
+  margin-bottom: 4px;
+}
+
+.ss2-badge-date {
+  font-size: 15px;
+  font-weight: 800;
+  color: #102a43;
+}
+
+.ss2-alert {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ss2-loading-card {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+  color: #627d98;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.ss2-cards {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ss2-card {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.ss2-card-label {
+  font-size: 13px;
+  font-weight: 700;
+  color: #486581;
+  margin-bottom: 12px;
+}
+
+.ss2-card-value {
+  font-size: 28px;
+  font-weight: 800;
+  color: #102a43;
+  line-height: 1.2;
+}
+
+.ss2-card-sub {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #7b8794;
+  line-height: 1.5;
+}
+
+.ss2-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 18px;
+}
+
+.ss2-panel {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.ss2-panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+  flex-wrap: wrap;
+}
+
+.ss2-panel-head h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #102a43;
+}
+
+.ss2-muted {
+  color: #7b8794;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.ss2-activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ss2-activity-item {
+  background: #f8fbff;
+  border: 1px solid #e5edf7;
+  border-radius: 16px;
+  padding: 14px;
+}
+
+.ss2-activity-title {
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: #486581;
+  margin-bottom: 6px;
+}
+
+.ss2-activity-text {
+  font-size: 14px;
+  color: #334e68;
+  line-height: 1.6;
+}
+
+.ss2-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.ss2-btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ss2-btn-primary {
+  background: linear-gradient(135deg, #00a1ff 0%, #2563eb 100%);
+  color: #ffffff;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.2);
+}
+
+.ss2-btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.26);
+}
+
+@media (max-width: 1200px) {
+  .ss2-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .ss2-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  .dashboard-content {
+    padding: 18px;
+  }
+
+  .ss2-title {
+    font-size: 24px;
+  }
+
+  .ss2-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ss2-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-content {
+    padding: 14px;
+  }
+
+  .ss2-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ss2-card,
+  .ss2-panel,
+  .ss2-header-badge {
+    border-radius: 16px;
+  }
+
+  .ss2-btn {
+    width: 100%;
+  }
+}

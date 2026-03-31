@@ -1,0 +1,424 @@
+/* ===============================
+   Layout
+=================================*/
+.ed-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f6f7fb;
+  font-family: Arial, sans-serif;
+}
+
+.ed-main {
+  flex: 1;
+  padding: 28px 34px;
+}
+
+/* ===============================
+   Welcome Section
+=================================*/
+.ed-welcomeRow {
+  margin-bottom: 16px;
+}
+
+.ed-welcomeTitle {
+  font-size: 22px;
+  font-weight: 900;
+  color: #111827;
+}
+
+.ed-welcomeSub {
+  margin-top: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+/* ===============================
+   Banner Card
+=================================*/
+.ed-banner {
+  position: relative;
+  border-radius: 18px;
+  overflow: hidden;
+  margin: 14px 0 24px;
+  height: 230px;
+  background:
+    linear-gradient(0deg, rgba(15,23,42,.65), rgba(15,23,42,.65)),
+    url("/dashboard-banner.png");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 14px 30px rgba(15, 23, 42, 0.20);
+}
+
+.ed-bannerOverlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 260px at 20% 10%, rgba(255,255,255,.10), transparent 60%);
+}
+
+.ed-bannerContent {
+  position: relative;
+  height: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+/* Left */
+.ed-bannerLeft {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.ed-companyLogo {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  object-fit: cover;
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+.ed-companyLogoFallback {
+  width: 70px;
+  height: 70px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 26px;
+  font-weight: 900;
+  background: rgba(255,255,255,.2);
+  border: 1px solid rgba(255,255,255,.4);
+}
+
+.ed-companyName {
+  font-size: 26px;
+  font-weight: 900;
+}
+
+.ed-companyDesc {
+  margin-top: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  max-width: 480px;
+  color: rgba(255,255,255,.9);
+}
+
+/* Right */
+.ed-bannerRight {
+  width: 360px;
+  background: rgba(0,0,0,.25);
+  border-radius: 16px;
+  padding: 12px 16px;
+  backdrop-filter: blur(6px);
+}
+
+.ed-miniRow {
+  display: flex;
+  justify-content: space-between;
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255,255,255,.15);
+}
+
+.ed-miniRow:last-child {
+  border-bottom: none;
+}
+
+.ed-miniLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: rgba(255,255,255,.8);
+}
+
+.ed-miniValue {
+  font-size: 12px;
+  font-weight: 900;
+  text-align: right;
+}
+
+/* ===============================
+   Progress Section
+=================================*/
+.ed-sectionTitle {
+  font-size: 26px;
+  font-weight: 900;
+  color: #111827;
+  margin-bottom: 14px;
+}
+
+.ed-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 22px;
+}
+
+.ed-card {
+  background: #fff;
+  border-radius: 18px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 12px 26px rgba(17,24,39,.12);
+  transition: transform .15s ease;
+}
+
+.ed-card:hover {
+  transform: translateY(-3px);
+}
+
+.ed-cardLabel {
+  font-size: 14px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.ed-cardValue {
+  margin-top: 10px;
+  font-size: 42px;
+  font-weight: 900;
+  color: #111827;
+}
+
+/* ===============================
+   Two Column Section
+=================================*/
+.ed-twoCol {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 20px;
+}
+
+/* Panel */
+.ed-panel {
+  background: #fff;
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 12px 24px rgba(17,24,39,.08);
+}
+
+.ed-panelTitle {
+  font-size: 18px;
+  font-weight: 900;
+  margin-bottom: 12px;
+  color: #111827;
+}
+
+.ed-panelTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* ===============================
+   Upcoming Interviews
+=================================*/
+.ed-upcomingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.ed-upItem {
+  padding: 12px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #eef2f7;
+}
+
+.ed-upMain {
+  font-weight: 900;
+  color: #111827;
+}
+
+.ed-upSub {
+  margin-top: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #6b7280;
+}
+
+.ed-muted {
+  font-size: 13px;
+  font-weight: 700;
+  color: #9ca3af;
+}
+
+/* ===============================
+   Reminder Section
+=================================*/
+.ed-filterSelect {
+  height: 36px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 0 12px;
+  font-weight: 800;
+  background: #f3f4f6;
+  color: #111827;
+  outline: none;
+}
+
+.ed-remList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.ed-remItem {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 14px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+}
+
+.ed-remItem.done {
+  opacity: 0.6;
+  background: #f3f4f6;
+}
+
+.ed-remTitle {
+  font-weight: 900;
+  color: #111827;
+}
+
+.ed-remDate {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+.ed-remNotes {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #374151;
+}
+
+.ed-remActions {
+  display: flex;
+  gap: 8px;
+}
+
+.ed-remBtn {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 999px;
+  border: none;
+  background: #1f4ea8;
+  color: #fff;
+  font-weight: 800;
+  cursor: pointer;
+  font-size: 12px;
+}
+
+.ed-remBtn.danger {
+  background: #ef4444;
+}
+
+/* Add Reminder Form */
+.ed-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.ed-label {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.ed-input {
+  height: 40px;
+  border-radius: 999px;
+  border: 1px solid #e5e7eb;
+  padding: 0 14px;
+  font-weight: 800;
+  background: #f3f4f6;
+  outline: none;
+}
+
+.ed-textarea {
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 10px 14px;
+  background: #f3f4f6;
+  font-weight: 800;
+  resize: vertical;
+  outline: none;
+}
+
+.ed-submit {
+  margin-top: 10px;
+  height: 44px;
+  border-radius: 999px;
+  border: none;
+  background: #1f4ea8;
+  color: #fff;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform .15s ease;
+}
+
+.ed-submit:hover {
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   Mini Stats
+=================================*/
+.ed-miniStats {
+  margin-top: 18px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.ed-miniStat {
+  padding: 10px;
+  border-radius: 14px;
+  background: #f9fafb;
+  text-align: center;
+  border: 1px solid #eef2f7;
+}
+
+.ed-miniStatLabel {
+  font-size: 12px;
+  font-weight: 800;
+  color: #6b7280;
+}
+
+.ed-miniStatValue {
+  margin-top: 6px;
+  font-size: 20px;
+  font-weight: 900;
+  color: #111827;
+}
+
+/* ===============================
+   Responsive
+=================================*/
+@media (max-width: 1100px) {
+  .ed-twoCol {
+    grid-template-columns: 1fr;
+  }
+
+  .ed-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ed-bannerContent {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ed-bannerRight {
+    width: 100%;
+    margin-top: 12px;
+  }
+}

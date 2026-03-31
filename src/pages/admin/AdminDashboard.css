@@ -1,0 +1,406 @@
+:root{
+  --brand: #21409a;
+  --brand-2: #1b3480;
+  --text: #111827;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --bg: #ffffff;
+  --panel: #ffffff;
+  --shadow: 0 10px 24px rgba(17, 24, 39, 0.08);
+}
+
+.admin-shell{
+  display:flex;
+  min-height:100vh;
+  background: var(--bg);
+}
+
+.admin-main{
+  flex:1;
+  padding: 22px;
+  color: var(--text);
+}
+
+/* ---------- Helpers ---------- */
+.muted{ color: var(--muted); }
+.link-btn{
+  border: none;
+  background: transparent;
+  color: var(--brand);
+  font-weight: 700;
+  cursor: pointer;
+  padding: 6px 8px;
+  border-radius: 10px;
+}
+.link-btn:hover{
+  background: rgba(33, 64, 154, 0.08);
+}
+
+/* ---------- Pills (no RGB) ---------- */
+.pill{
+  display:inline-flex;
+  align-items:center;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .08em;
+  border: 1px solid var(--border);
+}
+.pill-live{
+  color: var(--brand);
+  background: rgba(33, 64, 154, 0.10);
+}
+.pill-warn{
+  color: #8a5a00;
+  background: #fff7e6;
+}
+.pill-off{
+  color: #b42318;
+  background: #fff1f1;
+}
+
+/* ---------- Hero ---------- */
+.hero{
+  display:grid;
+  grid-template-columns: 1.4fr .9fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.hero > div{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 16px;
+}
+
+.hero-top{
+  display:flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items:flex-start;
+  flex-wrap: wrap;
+}
+
+.hero-kicker{
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  color: var(--brand);
+}
+
+.hero-title{
+  margin: 6px 0 4px;
+  font-size: 26px;
+  line-height: 1.2;
+}
+.hero-title span{
+  color: var(--brand);
+}
+
+.hero-sub{
+  margin: 0;
+  font-size: 14px;
+  color: var(--muted);
+}
+
+.hero-status{
+  display:flex;
+  flex-direction: column;
+  align-items:flex-end;
+  gap: 8px;
+}
+
+.hero-time{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.hero-progress{
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--border);
+}
+
+.hero-progress-head{
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-end;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hero-progress-label{
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.hero-progress-value{
+  margin-top: 6px;
+  font-size: 22px;
+  font-weight: 900;
+}
+
+/* Progress bar */
+.progress-track{
+  margin-top: 10px;
+  height: 12px;
+  border-radius: 999px;
+  background: #eef2ff; /* light brand tint */
+  border: 1px solid #dbe3ff;
+  overflow:hidden;
+}
+.progress-fill{
+  height: 100%;
+  border-radius: 999px;
+  background: var(--brand);
+}
+
+/* ---------- Quick Actions panel ---------- */
+.hero-actions{
+  display:flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.card-title{
+  font-weight: 900;
+  font-size: 14px;
+  color: var(--text);
+  margin-bottom: 4px;
+}
+
+.action-card{
+  border: 1px solid var(--border);
+  background: #fff;
+  border-radius: 16px;
+  padding: 12px;
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  gap: 12px;
+  text-align:left;
+  transition: transform .12s ease, border-color .12s ease, box-shadow .12s ease;
+}
+
+.action-card:hover{
+  transform: translateY(-1px);
+  border-color: rgba(33, 64, 154, 0.35);
+  box-shadow: 0 10px 18px rgba(33, 64, 154, 0.10);
+}
+
+.action-icon{
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  display:grid;
+  place-items:center;
+  background: rgba(33, 64, 154, 0.10);
+  border: 1px solid rgba(33, 64, 154, 0.18);
+  font-size: 18px;
+}
+
+.action-title{
+  font-weight: 900;
+  font-size: 13px;
+  color: var(--text);
+}
+.action-sub{
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.action-arrow{
+  margin-left:auto;
+  color: var(--brand);
+  font-weight: 900;
+}
+
+/* ---------- KPI grid ---------- */
+.kpi-grid{
+  display:grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.kpi{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.kpi-label{
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.kpi-value{
+  margin-top: 8px;
+  font-size: 26px;
+  font-weight: 900;
+  color: var(--brand);
+}
+
+/* ---------- Reminder section ---------- */
+.section-head{
+  margin-top: 18px;
+  display:flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.section-head h3{
+  margin:0;
+  font-size: 16px;
+  font-weight: 900;
+}
+
+.reminder-grid{
+  margin-top: 10px;
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 12px;
+}
+
+.panel{
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 14px;
+}
+
+.panel-head{
+  display:flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.panel-title{
+  font-weight: 900;
+  font-size: 14px;
+}
+.panel-sub{
+  margin-top: 2px;
+  font-size: 12px;
+}
+
+.calendar-wrap{
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  color: #111827 !;
+  background: #fafafa;
+}
+
+/* React Calendar: white + brand */
+/* Base calendar */
+.react-calendar {
+  width: 100%;
+  border: none;
+  background: transparent;
+  color: #000 !important;
+  font-family: inherit;
+}
+
+/* Navigation (Month / Year / arrows) */
+.react-calendar__navigation button {
+  color: #000 !important;
+  font-weight: 600;
+  border-radius: 10px;
+}
+
+/* Weekday labels (Mon Tue Wed...) */
+.react-calendar__month-view__weekdays__weekday {
+  color: #000 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* All day tiles */
+.react-calendar__tile {
+  color: #000 !important;
+  border-radius: 10px;
+}
+
+/* Today's date */
+.react-calendar__tile--now {
+  background: rgba(33, 64, 154, 0.12) !important;
+  color: #000 !important;
+  font-weight: 700;
+}
+
+/* Selected date */
+.react-calendar__tile--active {
+  background: #21409a !important;
+  color: #000 !important; /* You requested black */
+  font-weight: 700;
+}
+
+/* Hover state */
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: rgba(33, 64, 154, 0.08);
+  color: #000 !important;
+}
+
+/* Form */
+.form{
+  display:grid;
+  gap: 10px;
+}
+.form label{
+  display:grid;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--muted);
+  font-weight: 700;
+}
+.form input,
+.form textarea{
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 10px 12px;
+  outline: none;
+  background: #fff;
+  color: var(--text);
+}
+.form textarea{
+  min-height: 90px;
+  resize: vertical;
+}
+.form input:focus,
+.form textarea:focus{
+  border-color: rgba(33, 64, 154, 0.45);
+  box-shadow: 0 0 0 4px rgba(33, 64, 154, 0.10);
+}
+
+.primary{
+  border: none;
+  border-radius: 14px;
+  padding: 11px 12px;
+  cursor:pointer;
+  font-weight: 900;
+  background: var(--brand);
+  color: #fff;
+}
+.primary:hover{ background: var(--brand-2); }
+.primary:disabled{ opacity:.7; cursor:not-allowed; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px){
+  .hero{ grid-template-columns: 1fr; }
+  .kpi-grid{ grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reminder-grid{ grid-template-columns: 1fr; }
+  .hero-status{ align-items:flex-start; }
+}

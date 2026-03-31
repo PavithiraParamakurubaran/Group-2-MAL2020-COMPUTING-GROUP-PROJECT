@@ -1,0 +1,107 @@
+:root{
+  --brand: #21409a;
+  --brand-soft: rgba(33, 64, 154, 0.10);
+  --text: #000;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+}
+
+/* Container */
+.resume-stepper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 28px 0 32px;
+  position: relative;
+  padding: 0 10px;
+}
+
+/* Each Step */
+.step-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  position: relative;
+}
+
+/* Step Circle */
+.step-circle {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--border);
+  color: var(--muted);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+/* Active Step */
+.step-circle.active {
+  border-color: var(--brand);
+  background:white;
+  color: var(--brand);
+}
+
+/* Completed Step */
+.step-circle.completed {
+  border-color: var(--brand);
+  background: var(--brand);
+  color: #fff;
+}
+
+/* Step Label */
+.step-text {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--muted);
+  max-width: 90px;
+}
+
+/* Active label */
+.step-circle.active + .step-text {
+  color: var(--brand);
+}
+
+/* Completed label */
+.step-circle.completed + .step-text {
+  color: var(--brand);
+}
+
+/* Line Between Steps */
+.step-line {
+  position: absolute;
+  top: 21px;
+  left: 50%;
+  width: calc(100% - 42px);
+  height: 3px;
+  background: var(--border);
+  z-index: 1;
+  transform: translateX(21px);
+  transition: background 0.2s ease;
+}
+
+/* Completed line */
+.step-line.completed {
+  background: var(--brand);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .resume-stepper {
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .step-line {
+    display: none;
+  }
+}

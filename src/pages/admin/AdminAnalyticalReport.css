@@ -1,0 +1,271 @@
+.ar-layout {
+  display: flex;
+  min-height: 100vh;
+  background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+  font-family: Arial, sans-serif;
+}
+
+.ar-main {
+  flex: 1;
+  padding: 28px 32px;
+  box-sizing: border-box;
+}
+
+.ar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.ar-title {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 800;
+  color: #102a43;
+}
+
+.ar-subtitle {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: #627d98;
+  line-height: 1.6;
+}
+
+.ar-refresh-btn {
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #00a1ff 0%, #2563eb 100%);
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(37, 99, 235, 0.2);
+  transition: all 0.18s ease;
+}
+
+.ar-refresh-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 24px rgba(37, 99, 235, 0.26);
+}
+
+.ar-refresh-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ar-alert {
+  margin-bottom: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  background: #fff1f2;
+  border: 1px solid #fecdd3;
+  color: #be123c;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.ar-grid-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.ar-card {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+}
+
+.ar-card-label {
+  font-size: 13px;
+  font-weight: 800;
+  color: #486581;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin-bottom: 12px;
+}
+
+.ar-card-value {
+  font-size: 32px;
+  font-weight: 800;
+  color: #102a43;
+  line-height: 1.2;
+}
+
+.ar-card-note {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #7b8794;
+  line-height: 1.5;
+}
+
+.ar-progress-wrap {
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: #eaf1fb;
+  margin-top: 14px;
+  overflow: hidden;
+}
+
+.ar-progress-bar {
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #00a1ff 0%, #2563eb 100%);
+}
+
+.ar-grid-panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-bottom: 20px;
+}
+
+.ar-panel,
+.ar-bottom-panel {
+  background: #ffffff;
+  border: 1px solid #e5edf7;
+  border-radius: 22px;
+  padding: 20px;
+  box-shadow: 0 10px 26px rgba(15, 23, 42, 0.08);
+}
+
+.ar-panel-head {
+  margin-bottom: 16px;
+}
+
+.ar-panel-head h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 800;
+  color: #102a43;
+}
+
+.ar-summary-list,
+.ar-insight-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.ar-summary-item {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px;
+  border-radius: 14px;
+  background: #f8fbff;
+  border: 1px solid #e5edf7;
+}
+
+.ar-summary-label {
+  font-size: 14px;
+  color: #486581;
+  font-weight: 700;
+}
+
+.ar-summary-value {
+  font-size: 14px;
+  color: #102a43;
+  font-weight: 800;
+}
+
+.ar-insight-box {
+  padding: 14px;
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #e5edf7;
+}
+
+.ar-insight-title {
+  font-size: 14px;
+  font-weight: 800;
+  color: #102a43;
+  margin-bottom: 6px;
+}
+
+.ar-insight-text {
+  font-size: 14px;
+  color: #627d98;
+  line-height: 1.6;
+}
+
+.ar-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.ar-overview-box {
+  border-radius: 16px;
+  background: #f8fbff;
+  border: 1px solid #e5edf7;
+  padding: 16px;
+}
+
+.ar-overview-top {
+  font-size: 13px;
+  font-weight: 800;
+  color: #486581;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.ar-overview-bottom {
+  font-size: 14px;
+  font-weight: 700;
+  color: #334e68;
+  line-height: 1.6;
+}
+
+@media (max-width: 1100px) {
+  .ar-grid-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .ar-grid-panels {
+    grid-template-columns: 1fr;
+  }
+
+  .ar-overview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .ar-main {
+    padding: 18px;
+  }
+
+  .ar-title {
+    font-size: 24px;
+  }
+
+  .ar-grid-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .ar-overview-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .ar-card,
+  .ar-panel,
+  .ar-bottom-panel {
+    border-radius: 16px;
+  }
+
+  .ar-summary-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}

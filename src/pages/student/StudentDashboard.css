@@ -1,0 +1,13 @@
+/* Main Layout */
+.dashboard-layout {
+  display: flex;
+  min-height: 100vh;
+   background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
+
+/* Right content area */
+.dashboard-content {
+  flex: 1;
+  padding: 30px;
+   background: linear-gradient(180deg, #f8fbff 0%, #eef5ff 100%);
+}
